@@ -1,3 +1,3 @@
-# PlantATree-react-native
+# PlantATree-Android-App
 
 
