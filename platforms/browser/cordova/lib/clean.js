@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -16,19 +18,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
+ 
+var fs = require('fs'),
+    shjs = require('shelljs'),
+    path = require('path'),
+    check_reqs = require('./check_reqs'),
+    platformBuildDir = path.join('platforms', 'browser', 'build');
 
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-       
-    },
+exports.cleanProject = function(){
+
+    // Check that requirements are (stil) met
+    if (!check_reqs.run()) {
+        console.error('Please make sure you meet the software requirements in order to clean an browser cordova project');
+        process.exit(2);
+    }
+    
+    console.log('Cleaning Browser project');
+    try {
+        if (fs.existsSync(platformBuildDir)) {
+            shjs.rm('-r', platformBuildDir);
+        }
+    }
+    catch(err) {
+        console.log('could not remove '+platformBuildDir+' : '+err.message);
+    }
 };
 
-app.initialize();

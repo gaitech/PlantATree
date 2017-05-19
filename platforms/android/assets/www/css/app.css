@@ -1,0 +1,56 @@
+body {
+
+}
+/*css for app header*/
+.main-container {
+	height: 100%;
+	min-height: 500px;
+	display: flex;;
+	flex-direction: column;
+}
+header {
+	background: #4CAF50;
+	height: 60px;
+}
+header span {
+	font-size: 22px;
+	color: white;
+	line-height: 2.5;
+	padding-left: 20px;
+}
+/*css for login section*/
+.app-container {
+	height: 500px;
+	display: flex;
+	align-items: center;
+}
+/*css for login container*/
+.Login {
+	border: 2px solid gray;
+	padding: 20px !important;
+	box-shadow: 0px 1px 8px 0px;
+}
+/*css for login/register title*/
+.Login span {
+	color: #4CAF50;
+	font-size: 20px;
+}
+
+.go-button, .email-input {
+	padding: 0px !important;
+}
+.email-input {
+	margin-top: 2.5rem !important;
+}
+.email-input input[type=email]:focus{
+	border-bottom: 1px solid #4CAF50 !important;
+} 
+.email-input input[type=email]:focus + label {
+	color: #4CAF50 !important;
+}
+
+.go-button .btn, .go-button .btn:hover {
+	background-color: #4CAF50;
+	border-radius: 20px;
+	font-size: 18px;
+}
