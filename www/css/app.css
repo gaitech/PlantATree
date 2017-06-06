@@ -1,10 +1,11 @@
 body {
+	background: url("../img/planttreeback.gif") no-repeat center center fixed;
+	background-size: cover;
+	background-position: 30px 300px;
 
 }
 /*css for app header*/
 .main-container {
-	height: 100%;
-	min-height: 500px;
 	display: flex;;
 	flex-direction: column;
 }
@@ -18,39 +19,101 @@ header span {
 	line-height: 2.5;
 	padding-left: 20px;
 }
+header .menu_icon {
+	float: left;
+	margin-top: 3px;
+}
 /*css for login section*/
 .app-container {
-	height: 500px;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
+	margin-top: 50px !important;
+}
+.app-logo img {
+	height: 60px;
+	width: 60px;
 }
 /*css for login container*/
 .Login {
-	border: 2px solid gray;
 	padding: 20px !important;
-	box-shadow: 0px 1px 8px 0px;
+	margin-top: 25px;
+}
+.login_register {
+	margin-top: 20px;
 }
 /*css for login/register title*/
-.Login span {
-	color: #4CAF50;
-	font-size: 20px;
-}
 
-.go-button, .email-input {
+.go-button {
 	padding: 0px !important;
 }
 .email-input {
-	margin-top: 2.5rem !important;
+	margin-top: 2rem !important;
 }
-.email-input input[type=email]:focus{
+.email-input input[type=email]:focus, .add_comment input[type=text]:focus, .username input[type=text]:focus  {
 	border-bottom: 1px solid #4CAF50 !important;
 } 
-.email-input input[type=email]:focus + label {
+.email-input input[type=email]:focus + label, .username input[type=text]:focus + label {
 	color: #4CAF50 !important;
 }
 
-.go-button .btn, .go-button .btn:hover {
+.go-button .btn, .go-button .btn:hover, .save-button .btn, .save-button .btn:hover, .register-button .btn, .register-button .btn:hover {
 	background-color: #4CAF50;
-	border-radius: 20px;
 	font-size: 18px;
+}
+/* css for choose a tree page */
+.choose_tree {
+	text-align: center;
+	margin: 35px;
+}
+.choose_tree span, .plant_thanks span {
+	color: #4CAF50;
+	font-size: 18px;
+}
+.select_tree {
+	padding: 15px !important;
+}
+.select_tree .select-wrapper  .caret {
+	display: none;
+}
+.select_tree .select-wrapper .select-dropdown {
+	
+	border-radius: 20px;
+	text-align: center;
+	box-shadow: 0px 0px 8px 0px;
+	color: #4d4d4d;
+}
+.select_tree, .add_comment{
+	clear: both;
+}
+.add_comment {
+	padding: 15px;
+	color: #4d4d4d;
+}
+.save-button, .register-button {
+	text-align: center;
+	padding: 20px !important;
+}
+.done_all{
+	background: green;
+	color: white;
+	padding: 10px;
+	border-radius: 22px;
+}
+/*css for thanks screen*/
+.plant_thanks {
+	text-align: center;
+	margin: 15px;
+}
+.profile_main .card img {
+	height: 250px;
+}
+.card .red {
+	text-align: center;
+	font-size: 22px;
+}
+.img-grid img {
+	height: 150px;
+	width: 150px;
+	border-radius: 10px;
 }

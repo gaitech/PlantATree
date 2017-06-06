@@ -29,6 +29,28 @@ var app = {
     onDeviceReady: function() {
        
     },
+    // method to login into plant a tree
+    Login: function () {
+        var emailValue = document.getElementById("email").value;
+        var emailId="test";
+        url = "PlantATree.html";
+
+        if(emailValue == emailId) {
+            location.href = url;
+        }
+        else {
+            alert("Please enter a valid email")
+        }
+     
+    },
+    // method for register into plant a tree
+    Register: function () {
+        alert("Register Successfully");
+    },
+    // method for saving tree information
+    Save: function() {
+        location.href = "TreeeProfile.html";
+    }
 };
 
 app.initialize();

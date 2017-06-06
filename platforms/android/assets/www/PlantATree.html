@@ -2,14 +2,56 @@
 <html>
 <head>
 	<title>Plant A Tree</title>
-	<!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 	
 </head>
 <body>
+	<div class="choose_container">
+		<header>
+			<div>
+				<img class="menu_icon" src="img/menu-icon.png" />
+				<span>Plant A Tree</span>
+			</div>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<div class="choose_tree">
+						<span>Choose a Sapling</span>
+					</div>
+					<div class="input-field col s12 select_tree">
+						<select multiple>
+							<option value="" disabled selected>Choose a saplingx</option>
+							<option value="" data-icon="img/deodar.jpg" class="circle">deodar</option>
+							<option value="" data-icon="img/deodar.jpg" class="circle">Cheel</option>
+							<option value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<i class="material-icons done_all">done_all</i>
+						</select>
 
+
+					</div>
+					<div class="add_comment">
+						<input type="text" name="" placeholder="Add a Comment">
+					</div>
+					<div class="col s12 save-button" >
+						<a class="waves-effect waves-light btn" onclick="app.Save();">Save</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript"  src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/materialjquery.js"></script>
+	<script type="text/javascript"  src="js/materialize.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
