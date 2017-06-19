@@ -16,12 +16,16 @@ header {
 header span {
 	font-size: 22px;
 	color: white;
-	line-height: 2.5;
+	line-height: 2.7;
 	padding-left: 20px;
 }
-header .menu_icon {
+header .menu_icon  i {
 	float: left;
 	margin-top: 3px;
+	color: #ffffff;
+	font-size: 35px;
+	margin-left: 15px;
+	margin-top: 12px;
 }
 /*css for login section*/
 .app-container {
@@ -33,6 +37,7 @@ header .menu_icon {
 .app-logo img {
 	height: 60px;
 	width: 60px;
+	border-radius: 30px;
 }
 /*css for login container*/
 .Login {
@@ -64,14 +69,14 @@ header .menu_icon {
 /* css for choose a tree page */
 .choose_tree {
 	text-align: center;
-	margin: 35px;
+	margin: 25px;
 }
 .choose_tree span, .plant_thanks span {
 	color: #4CAF50;
 	font-size: 18px;
 }
 .select_tree {
-	padding: 15px !important;
+	margin-top: 40px !important;
 }
 .select_tree .select-wrapper  .caret {
 	display: none;
@@ -116,4 +121,70 @@ header .menu_icon {
 	height: 150px;
 	width: 150px;
 	border-radius: 10px;
+}
+.camera img {
+	width: 50px;
+	height: 50px;
+}
+.camera span {
+	color: #4CAF50;
+}
+.c_image {
+	display: none;
+}
+#myImage {
+	border-radius: 10px;
+	margin-top: 7px;
+}
+/*css for drawer*/ 
+.background {
+	background: url("../img/navbackground.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+.drawer_title {
+	font-size: 18px;
+}
+.choose_icon img {
+	height: 25px;
+	width: 25px;
+	/*margin-bottom: 2px;*/
+}
+.choose_icon a, .mine_icon a, .about_icon a {
+	font-size: 18px !important;
+}
+.about_icon img {
+	height: 20px;
+	width: 20px;
+	border-radius: 20px;
+	margin-bottom: 3px;
+}
+
+.close {
+	position: absolute;
+	z-index: 999;
+	right: 30px;
+	top: 228px;
+	text-align: center;
+}
+.close i {
+	line-height: 40px !important;
+	margin-left: 3px;
+	margin-top: 1px;
+}
+.close a {
+	height: 40px !important;
+	width: 40px !important	;
+}
+.close .send {
+	display: none;
+}
+.short_des {
+	border: 1px solid grey;
+	box-shadow: 0px 0px 10px 0px;
+	padding: 5px !important;
+	display: none;
+}
+.select_tree ul {
+	height: 100%;
+	min-height: 300px;
 }

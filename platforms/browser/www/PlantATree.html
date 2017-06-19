@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
-	  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 
 	
 </head>
@@ -16,7 +16,26 @@
 	<div class="choose_container">
 		<header>
 			<div>
-				<img class="menu_icon" src="img/menu-icon.png" />
+				<!-- <img class="menu_icon" src="img/menu-icon.png" /> -->
+				<ul id="slide-out" class="side-nav">
+					<li><div class="userView">
+						<div class="background">
+							
+							</div>
+						<div class="app-logo">
+							<img src="img/images.png"><br />
+							<span class="drawer_title">Plant a Tree</span>
+						</div> 
+						
+					</div></li>
+					<li class="choose_icon"><a href="PlantATree.html"><i class="material-icons"><img src="img/choosetree.png"></i>choose Sapling</a></li>
+					<li class="mine_icon"><a href="allTrees.html"><i class="material-icons">person_pin</i>Mine Trees</a></li>
+					<li class="mine_icon"><a href="contact.html"><i class="material-icons">contact_phone</i>Contact</a></li>				
+					<li><div class="divider"></div></li>
+					<li class="about_icon"><a href="About.html"><i class="material-icons"><img src="img/images.png"></i>About</a></li>
+					<li class="about_icon"><a onclick="app.exitApp();"><i class="material-icons"><img src="img/exitapp.jpg"></i>Exit</a></li>
+				</ul>
+				<a href="#" data-activates="slide-out" class="menu_icon button-collapse"><i class="material-icons">menu</i></a>
 				<span>Plant A Tree</span>
 			</div>
 		</header>
@@ -25,20 +44,43 @@
 				<div class="col s12">
 					<div class="choose_tree">
 						<span>Choose a Sapling</span>
+					</div> 
+					<div class="col s12 short_des" id="short-des">
+						<div class="col s12" style="text-align: center; font-weight: 600"><span>Tree Name</span></div>
+						<div class="col s3"><img class="col s6" src="img/images.png" style="height: 50px; width: 70px; border-radius: 20px"></div>
+						<div class="col s9"><span>this is a simple description of tree</span></div>
 					</div>
-					<div class="input-field col s12 select_tree">
-						<select multiple>
-							<option value="" disabled selected>Choose a saplingx</option>
+					<div class="input-field col s12 select_tree" >
+						<select multiple onclick="app.showDescription();">
+							<option id="select_tree" value="" id="disable" disabled selected>Choose a saplings</option>
 							<option value="" data-icon="img/deodar.jpg" class="circle">deodar</option>
 							<option value="" data-icon="img/deodar.jpg" class="circle">Cheel</option>
-							<option value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
-							<i class="material-icons done_all">done_all</i>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
+							<option id='close' value="" data-icon="img/deodar.jpg" class="circle">Toss</option>
 						</select>
-
-
+						<span class="close-Button close"><a class="btn-floating btn-large waves-effect waves-light green send"><i class="material-icons">send</i></a></span>
 					</div>
 					<div class="add_comment">
 						<input type="text" name="" placeholder="Add a Comment">
+					</div>
+					<div class="col s5 col m5 camera">
+						<img src="img/camera_icon.jpg" onclick="app.takePicture();"><br />
+						<span>Add a Photo</span>
+
+					</div>
+					<div class="col s7 col m7 c_image" id="c_container">
+						<img id="myImage" src="img/camera_icon.jpg">
 					</div>
 					<div class="col s12 save-button" >
 						<a class="waves-effect waves-light btn" onclick="app.Save();">Save</a>
@@ -48,7 +90,7 @@
 		</div>
 	</div>
 
-
+	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript"  src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/materialjquery.js"></script>
 	<script type="text/javascript"  src="js/materialize.js"></script>

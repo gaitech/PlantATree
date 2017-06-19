@@ -8,12 +8,32 @@
 
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
 </head>
 <body>
 	<div class="allTree">
 		<header>
 			<div>
-				<img class="menu_icon" src="img/menu-icon.png" />
+				<!-- <img class="menu_icon" src="img/menu-icon.png" /> -->
+				<ul id="slide-out" class="side-nav">
+					<li><div class="userView">
+						<div class="background">
+							
+							</div>
+						<div class="app-logo">
+							<img src="img/images.png"><br />
+							<span class="drawer_title">Plant a Tree</span>
+						</div> 
+						
+					</div></li>
+					<li class="choose_icon"><a href="PlantATree.html"><i class="material-icons"><img src="img/choosetree.png"></i>choose Sapling</a></li>
+					<li class="mine_icon"><a href="allTrees.html"><i class="material-icons">person_pin</i>Mine Trees</a></li>
+					<li class="mine_icon"><a href="contact.html"><i class="material-icons">contact_phone</i>Contact</a></li>				
+					<li><div class="divider"></div></li>
+					<li class="about_icon"><a href="About.html"><i class="material-icons"><img src="img/images.png"></i>About</a></li>
+					<li class="about_icon"><a onclick="app.exitApp();"><i class="material-icons"><img src="img/exitapp.jpg"></i>Exit</a></li>
+				</ul>
+				<a href="#" data-activates="slide-out" class="menu_icon button-collapse"><i class="material-icons">menu</i></a>
 				<span>Plant A Tree</span>
 			</div>
 		</header>
@@ -27,6 +47,12 @@
 				<div class="col s6 img-grid"><img src="img/deodar.jpg"></div>
 			</div>
 		</div>
-	</div>
+	</div>	
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript"  src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/materialjquery.js"></script>
+	<script type="text/javascript"  src="js/materialize.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

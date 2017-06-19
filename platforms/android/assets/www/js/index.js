@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
+ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -27,12 +27,13 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-       
+
+
     },
     // method to login into plant a tree
     Login: function () {
         var emailValue = document.getElementById("email").value;
-        var emailId="test";
+        var emailId="anuj.k@gai.co.in";
         url = "PlantATree.html";
 
         if(emailValue == emailId) {
@@ -41,7 +42,7 @@ var app = {
         else {
             alert("Please enter a valid email")
         }
-     
+
     },
     // method for register into plant a tree
     Register: function () {
@@ -50,6 +51,31 @@ var app = {
     // method for saving tree information
     Save: function() {
         location.href = "TreeeProfile.html";
+    },
+    takePicture: function () {
+        navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+            destinationType: Camera.DestinationType.FILE_URI });
+
+        function onSuccess(imageURI) {
+            var image = document.getElementById('myImage');
+            var imageContainer = document.getElementById("c_container").style.display = "block";
+            image.src = imageURI;
+            image.style.height = '60px';
+            image.style.width = '60px';
+        }
+
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+    },
+
+    exitApp: function () {
+        navigator.app.exitApp();
+    },
+
+    showDescription: function () {
+        var test = document.getElementByTagName('select');
+        conssole.log(test);
     }
 };
 
