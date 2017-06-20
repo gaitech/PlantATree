@@ -71,7 +71,7 @@ header .menu_icon  i {
 	text-align: center;
 	margin: 25px;
 }
-.choose_tree span, .plant_thanks span {
+.choose_tree span, .plant_thanks span, .about-page span, .contact-page span {
 	color: #4CAF50;
 	font-size: 18px;
 }
@@ -106,7 +106,7 @@ header .menu_icon  i {
 	border-radius: 22px;
 }
 /*css for thanks screen*/
-.plant_thanks {
+.plant_thanks, .about-page, .contact-page {
 	text-align: center;
 	margin: 15px;
 }
@@ -187,4 +187,16 @@ header .menu_icon  i {
 .select_tree ul {
 	height: 100%;
 	min-height: 300px;
+}
+/* css about page */
+.about-icon, .contact-icon {
+	text-align: center;
+	margin-top: 20px;
+}
+.about-icon img, .contact-icon img {
+	height: 150px;
+	width: 150px;
+}
+.about-app {
+	text-align: center;
 }

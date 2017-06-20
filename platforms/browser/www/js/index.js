@@ -33,7 +33,7 @@
     // method to login into plant a tree
     Login: function () {
         var emailValue = document.getElementById("email").value;
-        var emailId="anuj.k@gai.co.in";
+        var emailId="testapp";
         url = "PlantATree.html";
 
         if(emailValue == emailId) {
