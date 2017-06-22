@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+<widget id="io.plantatree.gaitech" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <platform name="android">
+        <splash src="www/img/screen.png" />
+        <preference name="SplashScreenBackgroundColor" value="white" />
+    </platform>
+    <name>Plant A tree</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A simple app which allow to user to plant a tre anywhere 
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="anuj.k@gai.co.in" href="http://gai.co.in/">
+        gai Technologies app development team
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -22,7 +26,9 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <icon src="www/img/logo.png" />
     <engine name="android" spec="~6.1.2" />
     <plugin name="cordova-plugin-camera" spec="^2.4.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
 </widget>

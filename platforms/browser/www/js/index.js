@@ -27,8 +27,9 @@
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-
-
+        setTimeout(function() {
+            navigator.splashscreen.hide();
+        }, 2000);
     },
     // method to login into plant a tree
     Login: function () {
