@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.plantatree.gaitech" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <platform name="android">
-        <splash src="www/img/screen.png" />
+        <splash src="www/img/screen.png"/>
         <preference name="SplashScreenBackgroundColor" value="white" />
     </platform>
     <name>Plant A tree</name>

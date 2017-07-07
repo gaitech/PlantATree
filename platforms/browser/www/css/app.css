@@ -82,10 +82,10 @@ header .menu_icon  i {
 	display: none;
 }
 .select_tree .select-wrapper .select-dropdown {
-	
+	border-bottom: none;
 	border-radius: 20px;
 	text-align: center;
-	box-shadow: 0px 0px 8px 0px;
+	box-shadow: 0px 1px 6px 0px rgba(0,0,0,.2);
 	color: #4d4d4d;
 }
 .select_tree, .add_comment{
@@ -111,7 +111,7 @@ header .menu_icon  i {
 	margin: 15px;
 }
 .profile_main .card img {
-	height: 250px;
+	height: 220px;
 }
 .card .red {
 	text-align: center;
@@ -179,8 +179,8 @@ header .menu_icon  i {
 	display: none;
 }
 .short_des {
-	border: 1px solid grey;
-	box-shadow: 0px 0px 10px 0px;
+	border: 1px solid #e0e0e0;
+	box-shadow: 0px 0px 6px 0px rgba(189, 189, 189, 0.7);
 	padding: 5px !important;
 	display: none;
 }
@@ -199,4 +199,11 @@ header .menu_icon  i {
 }
 .about-app {
 	text-align: center;
+}
+.card p {
+  padding: 0 0.7em 0.5em;
+}
+.info-tree span {
+	color: #4CAF50;
+	display: block;
 }
