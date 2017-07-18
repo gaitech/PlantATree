@@ -47,7 +47,17 @@
     },
     // method for register into plant a tree
     Register: function () {
-        alert("Register Successfully");
+        window.plugins.toast.showWithOptions(
+            {
+              message: "hey there",
+              duration: "short", // which is 2000 ms. "long" is 4000. Or specify the nr of ms yourself.
+              position: "bottom",
+              addPixelsY: -40  // added a negative value to move it up a bit (default 0)
+            },
+            // onSuccess, // optional
+            // onError    // optional
+        );
+
     },
     // method for saving tree information
     Save: function() {
