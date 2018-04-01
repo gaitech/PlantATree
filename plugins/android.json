@@ -1,28 +1,30 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.plantatree.gaitech"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.plantatree.gaitech"
     },
-    "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "io.plantatree.gaitech"
-        },
-        "cordova-plugin-x-toast": {
-            "PACKAGE_NAME": "io.plantatree.gaitech"
-        }
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "io.plantatree.gaitech"
     },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        }
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "io.plantatree.gaitech"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "io.plantatree.gaitech"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.plantatree.gaitech"
     }
+  },
+  "dependent_plugins": {}
 }

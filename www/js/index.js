@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ var file = new FileManager();
+ var dir = new DirManager();
+
  var app = {
     // Application Constructor
     initialize: function() {
@@ -30,7 +33,15 @@
         setTimeout(function() {
             navigator.splashscreen.hide();
         }, 2000);
+
+        // debug
+        app.CreateTestFile();
     },
+
+    CreateTestFile: function()  {
+       // dir.create('plantatree', Log('created successfully'), Log('something went wrong'), "ExternalAppStorageDir");
+    },
+
     // method to login into plant a tree
     Login: function () {
         var emailValue = document.getElementById("email").value;
@@ -59,10 +70,13 @@
         );
 
     },
+
     // method for saving tree information
     Save: function() {
         location.href = "TreeeProfile.html";
     },
+
+
     takePicture: function () {
         navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
             destinationType: Camera.DestinationType.FILE_URI });

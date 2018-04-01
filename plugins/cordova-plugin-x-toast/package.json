@@ -10,7 +10,7 @@
         "spec": "latest",
         "type": "tag"
       },
-      "/home/anuj-pc/work/apps/phonegap_app/PlantATree/node_modules"
+      "/data/PlantATree"
     ]
   ],
   "_from": "cordova-plugin-x-toast@latest",
@@ -45,7 +45,7 @@
   "_shasum": "4778becb61e36c8951091a075850c28ded8f56a5",
   "_shrinkwrap": null,
   "_spec": "cordova-plugin-x-toast",
-  "_where": "/home/anuj-pc/work/apps/phonegap_app/PlantATree/node_modules",
+  "_where": "/data/PlantATree",
   "author": {
     "name": "Eddy Verbruggen",
     "email": "eddyverbruggen@gmail.com",
