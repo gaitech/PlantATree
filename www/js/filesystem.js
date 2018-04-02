@@ -137,7 +137,6 @@ catch(e){
         fail = (typeof fail == 'undefined')? Log('DirManager','crete fail'): fail;
         if( typeof customfilesystem !== 'undefined') {
           storingDir = cordovaFS(customfilesystem);
-          alert(storingDir);
           console.log(storingDir);
           window.resolveLocalFileSystemURL(storingDir,  function(dir) {
             var entry = dir;
