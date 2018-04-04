@@ -64,10 +64,14 @@
     },
 
     Register: function()  {
-        arr['name'] = document.getElementById("r_username").value;
-        arr['email'] = document.getElementById("email").value;
-        alert ('register')
-        // alert (JSON.stringify(arr));
+        var arr = new Object();
+        arr.name = document.getElementById("r_username").value
+        arr.email = document.getElementById("r_email").value
+        arr.dummy = 'dummy'
+
+        file.writeFile('plantatree', 'config.txt', JSON.stringify(arr), function(result) {
+            alert(result);
+        },Log("Register infor write error"), "ExternalAppStorageDir");
     },
 
 
