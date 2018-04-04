@@ -35,11 +35,11 @@
         }, 2000);
 
         // debug
-        app.CreateTestFile();
+        app.CreateAppDir();
     },
 
-    CreateTestFile: function()  {
-       // dir.create('plantatree', Log('created successfully'), Log('something went wrong'), "ExternalAppStorageDir");
+    CreateAppDir: function()  {
+       dir.create('plantatree', Log('created successfully'), Log('something went wrong'), "ExternalAppStorageDir");
     },
 
     // method to login into plant a tree
@@ -57,19 +57,19 @@
 
     },
     // method for register into plant a tree
-    Register: function () {
-        window.plugins.toast.showWithOptions(
-            {
-              message: "hey there",
-              duration: "short", // which is 2000 ms. "long" is 4000. Or specify the nr of ms yourself.
-              position: "bottom",
-              addPixelsY: -40  // added a negative value to move it up a bit (default 0)
-            },
-            // onSuccess, // optional
-            // onError    // optional
-        );
-
+    RegisterMsg: function () {
+        var msg = "Hi! Thanks for Registering.<br> Simply enter a unique name and email ID to store your Tree Planting Details. <br>"
+        // window.plugins.toast.showLongTop("Welcome");
+        Materialize.toast(msg);
     },
+
+    Register: function()  {
+        arr['name'] = document.getElementById("r_username").value;
+        arr['email'] = document.getElementById("email").value;
+        alert ('register')
+        // alert (JSON.stringify(arr));
+    },
+
 
     // method for saving tree information
     Save: function() {
@@ -94,8 +94,15 @@
         }
     },
 
-    exitApp: function () {
-        navigator.app.exitApp();
+    pat_exit: function () {
+        alert ("Exiting");
+        if (navigator.app) {
+            navigator.app.exitApp();
+        } else if (navigator.device) {
+            navigator.device.exitApp();
+        } else {
+            window.close();
+        }
     },
 
     showDescription: function () {
