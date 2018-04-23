@@ -39,7 +39,12 @@
     },
 
     CreateAppDir: function()  {
-       dir.create('plantatree', Log('created successfully'), Log('something went wrong'), "ExternalAppStorageDir");
+       if (dir.dirExist('plantatree', 'ExternalAppStorageDir') == false)  {
+           Log ("CreateAppDir: creating directory");
+           dir.create('plantatree', Log('CreateAppDir: created successfully'), Log('CreateAppDir: something went wrong'), "ExternalAppStorageDir");
+        } else {
+            Log("CreateAppDir: dir exists, skipping create");
+        }
     },
 
     // method to login into plant a tree
@@ -69,7 +74,12 @@
         arr.email = document.getElementById("r_email").value
         arr.dummy = 'dummy'
 
-        file.writeFile('plantatree', 'config.txt', JSON.stringify(arr), function(result) {
+        if (file.fileExists('plantatree', 'registered_user.json'))
+            Log ("file registered_user.json exists")
+        else
+            Log ("file registered_user.json does NOT exists")
+
+        file.writeFile('plantatree', 'registered_user.json', JSON.stringify(arr), function(result) {
             alert(result);
         },Log("Register infor write error"), "ExternalAppStorageDir");
     },
